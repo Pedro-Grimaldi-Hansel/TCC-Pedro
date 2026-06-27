@@ -1,28 +1,26 @@
-# ===== Python =====
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-
-# ===== Virtual Environment =====
+# ── Ambiente Python ───────────────────────────────────────────────────
 .venv/
-venv/
-env/
-
-# ===== Jupyter =====
+__pycache__/
+*.pyc
+*.pyo
 .ipynb_checkpoints/
 
-# ===== VS Code =====
+# ── Editor ────────────────────────────────────────────────────────────
 .vscode/
 
-# ===== Data (datasets grandes ou brutos) =====
-data/raw/
-data/*.zip
-data/*.csv
+# ── Dados (baixados do FTP do DATASUS ou gerados pelo pipeline) ────────
+# Pesados e reconstruíveis: a etapa 01 rebaixa/regenera tudo.
+dados/
+dados_sim/
+*.dbc
+*.dbf
 
-# ===== OS =====
-.DS_Store
-Thumbs.db
+# ── Artefatos gerados (reproduzíveis ao rodar o pipeline) ─────────────
+figuras/
+resultados/
+features_cache.pkl
+*.pkl
+*.zip
 
-# ===== Logs =====
-*.log
+# ── Instruções locais de ferramenta (não fazem parte do projeto) ──────
+CLAUDE.md
